@@ -1,3 +1,6 @@
+import json
+from difflib import get_close_matches
+
 def translate(word):
     word=word.lower()
     if word in data:
@@ -13,8 +16,7 @@ def translate(word):
 
     else:
         return "can't find the word, please recheck it"
-import json
-from difflib import get_close_matches
+
 data=json.load(open("data.json"))
 word=input("enter the word:  ")
 
